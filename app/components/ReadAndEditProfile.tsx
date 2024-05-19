@@ -109,7 +109,7 @@ export default function ProfileForm() {
             Clear
           </Button>
           {profileFormData.job !== '' && profileFormData.name !== '' && (
-            <LinkButton href='/characters?page=1'>Let's go</LinkButton>
+            <LinkButton href='/characters?page=1'>Let&apos;s go</LinkButton>
           )}
         </VStack>
       </Box>
