@@ -45,13 +45,13 @@ export default function ProfileForm() {
         bg='purple.100'
         mb={6}
       >
-        <Heading as='h1' size='md' mb={2} color='purple.800'>
+        <Heading as='h1' size={['sm', 'md']} mb={2} color='purple.800'>
           What&apos;s your name?
         </Heading>
         <Text fontSize='lg' mb={4} color='purple.700'>
           {profileFormData.name}
         </Text>
-        <Heading as='h1' size='md' mb={2} color='purple.800'>
+        <Heading as='h1' size={['sm', 'md']} mb={2} color='purple.800'>
           What&apos;s your job title?
         </Heading>
         <Text fontSize='lg' color='purple.700'>
@@ -90,7 +90,7 @@ export default function ProfileForm() {
             />
           </FormControl>
           <Button mt={4} colorScheme='purple' size='md' type='submit'>
-            Save
+            I am happy
           </Button>
           <Button
             mt={4}
@@ -109,9 +109,7 @@ export default function ProfileForm() {
             Clear
           </Button>
           {profileFormData.job !== '' && profileFormData.name !== '' && (
-            <LinkButton href='/characters?page=1'>
-              View All Your Buddies
-            </LinkButton>
+            <LinkButton href='/characters?page=1'>Let's go</LinkButton>
           )}
         </VStack>
       </Box>

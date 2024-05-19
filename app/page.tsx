@@ -5,10 +5,10 @@ import { Box, Text } from './chakraProxy';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Box>
-        <Text fontSize='x-large'>
-          Tell us a bit about yourself and we can show you who you can
-          potentially pair with
+      <Box textAlign='center' p={4}>
+        <Text fontSize={['sm', 'md', 'lg', 'xl', '2xl']}>
+          Tell us who you are and our great AI will show you who your best
+          buddies are!
         </Text>
       </Box>
       <ReadAndEditProfile />
