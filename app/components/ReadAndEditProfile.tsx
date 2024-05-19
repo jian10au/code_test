@@ -36,11 +36,11 @@ export default function ProfileForm() {
   }
 
   return (
-    <Box p={4} maxW='600px' mx='auto' bg='purple.50'>
+    <Box p={4} maxW='600px' mx='auto' bg='purple.100'>
       <Box
         p={4}
-        border='1px solid'
-        borderColor='purple.200'
+        border='2px solid'
+        borderColor='black.200'
         borderRadius='x-large'
         bg='purple.100'
         mb={6}

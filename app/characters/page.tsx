@@ -14,8 +14,10 @@ export default async function Characters(props: ICharactersProps) {
   const page = parseInt(searchParams['page']);
 
   return (
-    <Box px={4}>
-      <Heading as='h2'>Your buddies info</Heading>
+    <Box px={4} bgColor={'black'}>
+      <Heading as='h2' color={'white'}>
+        Your buddies info
+      </Heading>
       <LinkButton href='/'>Back to home</LinkButton>
       <CharactersGrid page={page} />
       <PaginationControls totalCount={826} />

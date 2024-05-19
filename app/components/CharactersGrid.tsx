@@ -1,4 +1,4 @@
-import { Grid } from '../chakraProxy/index';
+import { Box, Grid, Text } from '../chakraProxy/index';
 import React from 'react';
 import { gql } from '@apollo/client';
 import { getClient } from '../ApolloClient/client';
@@ -41,29 +41,36 @@ export default async function CharactersGrid({ page }: { page: number }) {
   });
 
   return (
-    <Grid
-      mt={4}
-      templateColumns={[
-        'repeat(1, 1fr)',
-        'repeat(2, 1fr)',
-        'repeat(3, 1fr)',
-        'repeat(4, 1fr)',
-        'repeat(5, 1fr)',
-      ]}
-      gap={4}
-    >
-      {data.characters.results.map((char: ICharacter) => (
-        <GridItemDetail
-          key={char.id}
-          char={{
-            id: char.id,
-            name: char.name,
-            location: char.location,
-            status: char.status,
-            image: char.image,
-          }}
-        />
-      ))}
-    </Grid>
+    <>
+      <Grid
+        mt={4}
+        templateColumns={[
+          'repeat(1, 1fr)',
+          'repeat(2, 1fr)',
+          'repeat(3, 1fr)',
+          'repeat(4, 1fr)',
+          'repeat(5, 1fr)',
+        ]}
+        gap={4}
+      >
+        {data.characters.results.map((char: ICharacter) => (
+          <GridItemDetail
+            key={char.id}
+            char={{
+              id: char.id,
+              name: char.name,
+              location: char.location,
+              status: char.status,
+              image: char.image,
+            }}
+          />
+        ))}
+      </Grid>
+      <Box textAlign='center' mt='2'>
+        <Text color={'white'} fontSize='lg'>
+          {page} / 42
+        </Text>
+      </Box>
+    </>
   );
 }
