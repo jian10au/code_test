@@ -1,7 +1,7 @@
 import { Grid } from '../chakraProxy/index';
 import React from 'react';
 import { gql } from '@apollo/client';
-import { getClient } from '../client/client';
+import { getClient } from '../ApolloClient/client';
 import GridItemDetail from './GridItemDetail';
 
 const query = gql`

@@ -61,7 +61,6 @@ export default function ProfileForm() {
       <Box
         as='form'
         onSubmit={(e) => {
-          console.log('am I hit by entering the form?');
           e.preventDefault();
           const formData = new FormData(e.target as HTMLFormElement);
           createNoteAction(formData);

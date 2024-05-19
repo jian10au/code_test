@@ -1,3 +1,5 @@
+// export all chakra components and add 'use client' to them
+
 import {
   Grid,
   GridItem,
